@@ -1,0 +1,13 @@
+6) Необязательное задание, но его выполнение будет плюсом.Так же есть таблица parents (см задание 5)
+
+id int
+name varchar
+created_at datetime
+
+a) посчитайте количество студентов с родителями
+b) посчитайте количество студентов с родителями при том что имя родителя Марина
+c) посчитайте количество студентов без родителя
+
+a) SELECT COUNT(parent_id) FROM students;
+b) SELECT COUNT() FROM students INNER JOIN parents ON parents_id = parents.ROWID where parents.name = 'Марина';
+c) SELECT COUNT(id) FROM students WHERE parents_id IS NULL;
